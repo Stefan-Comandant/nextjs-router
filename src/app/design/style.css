@@ -1,0 +1,58 @@
+:root {
+  --image_width: 270px;
+  --image_height: 187px;
+  --image_scale: 0.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.rect {
+  border: 2px solid gray;
+  border-radius: 3rem;
+  padding: 2rem 1.5rem;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 600;
+  min-width: fit-content;
+  display: grid;
+  grid-template-columns: calc(var(--image_width) * var(--image_scale)) 1fr;
+  grid-template-rows: auto;
+  transform: scale(1);
+  transition: transform 350ms;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.rect:hover {
+  transform: scale(0.9);
+}
+
+/* Flag css */
+
+.flag {
+  --width: 30rem;
+  width: var(--width);
+  height: calc((2 * var(--width)) / 3);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.blue {
+  background: blue;
+}
+.yellow {
+  background: yellow;
+}
+.red {
+  background: red;
+}
